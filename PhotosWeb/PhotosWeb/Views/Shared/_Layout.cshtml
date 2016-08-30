@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#444444">
+    <title>Free stock photos · PhotoWeb</title>
+    @Styles.Render("~/Content/css")
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/index.js"></script>
+
+</head>
+<body class="">
+    <header class="navbar navbar--hero">      
+            <nav class="l-container-center">
+                <h2 class="navbar__title">
+                    <span class="sr-only">PhotosWeb</span>
+                    <a class="navbar__title__anchor" title="Free Stock Photos" data-track-action="navbar" data-track-label="logo" href="/">
+                        
+                    </a>
+                </h2>
+                <div class="navbar__mobile-ctrl visible-md">
+                    <button class="navbar__toggle navbar__toggle--search" type="button" data-track-action="navbar" data-track-label="mobile-search">
+                        <i class="icon-search"></i>
+                    </button>
+                    <button class="navbar__toggle navbar__toggle--menu" type="button" data-track-action="navbar" data-track-label="mobile-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar__toggle__bar"></span>
+                        <span class="navbar__toggle__bar"></span>
+                        <span class="navbar__toggle__bar"></span>
+                    </button>
+                </div>
+                <div class="navbar__md-nav navbar__md-nav--search ">
+                    <form class="navbar__search pull-left" role="search" method="get" action="/">
+                        <input required="required" placeholder="Search for free photos" name="s" value="" type="search" />
+                        <button class="navbar__search__icon" title="Search" data-track-action="navbar" data-track-label="searchicon">
+                            <i class="icon-search"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="navbar__md-nav navbar__md-nav--menu">
+                    <ul class="navbar__list pull-right">
+                       
+                        <li>
+                            <a href="/submit-photos/" class="hide-if-signed-in" data-track-action="navbar" data-track-label="submit">Upload</a>
+                            <a href="/upload/" class="show-if-signed-in" data-track-action="navbar" data-track-label="submit" rel="nofollow">Upload</a>
+                        </li>
+                        <li class="navbar__dropdown">
+                            <a href="/discover/" data-dropdown-selector="#browse-dropdown" data-is-clickable="true" class="js-dropdown" data-track-action="navbar" data-track-label="browse">
+                                Browse
+                                <svg width="8" class="navbar__icon-caret" height="5" viewBox="0 0 8 5" xmlns="http://www.w3.org/2000/svg"><path d="M6.752 1.514C7.472.678 7.158 0 6.057 0H1.052C-.05 0-.332.654.426 1.46L2.38 3.54c.758.806 1.952.786 2.674-.054l1.698-1.972z" fill="#FFFFFF" fill-rule="evenodd"></path></svg>
+                            </a>
+                            <div class="btn__dropdown" id="browse-dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="/discover/" title="Beautiful pictures" data-track-action="navbar" data-track-label="discover">Discover Photos</a>
+                                    </li>
+                                    <li>
+                                        <a href="/popular-photos/" data-track-action="navbar" data-track-label="popular">Popular Photos</a>
+                                    </li>
+                                    <li>
+                                        <a href="/popular-searches/" data-track-action="navbar" data-track-label="popular-searches">Popular Searches</a>
+                                    </li>
+                                    <li>
+                                        <a href="/leaderboard/" data-track-action="navbar" data-track-label="leaderboard">Leaderboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="/search/color:%20%238600b3/" data-track-action="navbar" data-track-label="colors">Photos by Color</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="navbar__dropdown">
+                            <a href="#profile-dropdown" class="js-dropdown" data-track-action="navbar" data-track-label="more">
+                                <div class="hide-if-signed-in">
+                                    <span class="icon-dot"></span>
+                                    <span class="icon-dot"></span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <img class="js-avatar show-if-signed-in" height="30" width="30" />
+                            </a>
+                            <div class="btn__dropdown" id="profile-dropdown">
+                                <ul>
+                                    <li class="hide-if-signed-in">
+                                        <a href="/login/" rel="nofollow" data-track-action="navbar" data-track-label="login">Login</a>
+                                    </li>
+                                    <li class="hide-if-signed-in">
+                                        <a href="/join/" rel="nofollow" data-track-action="navbar" data-track-label="signup">Sign Up</a>
+                                    </li>
+                                    <li class="show-if-signed-in">
+                                        <a href="/me/" rel="nofollow" data-track-action="navbar" data-track-label="profile">Your Profile</a>
+                                    </li>
+                                    <li class="show-if-signed-in">
+                                        <a href="/me/likes/" rel="nofollow" data-track-action="navbar" data-track-label="likes">Your Likes</a>
+                                    </li>
+                                    <li class="show-if-signed-in">
+                                        <a href="/edit-profile/" rel="nofollow" data-track-action="navbar" data-track-label="setting">Settings</a>
+                                    </li>
+                                    <li class="show-if-signed-in">
+                                        <a href="/logout/" rel="nofollow" data-track-action="navbar" data-track-label="logout" class="js-logout-btn">Logout</a>
+                                    </li>
+                                    <li class="show-if-signed-in">
+                                        <hr>
+                                    </li>
+                                    <li>
+                                        <a href="/pro/mac-and-windows-app/" data-track-action="navbar" data-track-label="apps">Apps &amp; PS Plugin</a>
+                                    </li>
+                                    <li>
+                                        <a href="/newsletter/" data-track-action="navbar" data-track-label="newsletter">Newsletter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/blog/" target="_blank" data-track-action="navbar" data-track-label="blog">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Free stock videos – PhotosWeb Videos" target="_blank" data-track-action="navbar" data-track-label="videos">Free Videos</a>
+                                    </li>
+                                    <li>
+                                        <a href="/about/" data-track-action="navbar" data-track-label="about" rel="nofollow">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="/faq/" data-track-action="navbar" data-track-label="faq" rel="nofollow">FAQ</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <div class="navbar-overlay"></div>
+    
+    <header class="hero" style="background-image: url(../../images/header.jpg)">
+        <div class="l-container">
+            <span class="sr-only">Free high quality photos · PhotsWeb</span>
+            <h1 class="hero__title" title="Free stock photos"></h1>
+            <h2 class="hero__subtitle">Best free stock photos in one place. <a href="/photo-license/" title="About us &amp; the license" data-track-action="hero" data-track-label="learn-more">Learn More</a></h2>
+            <section class="search">
+                <form role="search" method="get" action="/">
+                    <input required="required" autofocus class="search__input" type="search" placeholder="Search for free photos…" name="s">
+                    <button class="search__icon" title="Search" data-track-action="hero" data-track-label="searchicon">
+                        <i class="icon-search"></i>
+                    </button>
+                </form>
+                <h3 class="search__title">Popular Searches:</h3>
+                <ul class="search__tags">
+                    <li><a href="/search/boat/">boat</a></li>
+                    <li><a href="/search/kitchen/">kitchen</a></li>
+                    <li><a href="/search/new%20york%20city%20wallpaper/">new york city wallpaper</a></li>
+                    <li><a href="/search/industry/">industry</a></li>
+                    <li><a href="/search/person/">person</a></li>
+                    <li><a href="/search/social%20media/">social media</a></li>
+                    <li><a href="/search/laptop/">laptop</a></li>
+                    <li><a href="/search/couple/">couple</a></li>
+                    <li><a href="/search/bike/">bike</a></li>
+                    <li><a href="/search/family/">family</a></li>
+                    <li><a href="/search/makeup/">makeup</a></li>
+                    <li><a href="/search/stars/">stars</a></li>
+                    <li><a href="/search/sexy/">sexy</a></li>
+                    <li><a href="/search/dog/">dog</a></li>
+                    <li><a href="/search/love/">love</a></li>
+                </ul>
+            </section>
+
+        </div>
+    </header>
+    <div class="l-container">
+
+    </div>
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+</body>
+</html>
